@@ -1,0 +1,24 @@
+# GoDaddy account information
+gduser = 'your_godaddy_login'
+gdpass = 'password'
+
+# the domain that has DNS hosted at GoDaddy
+domain = 'yourdomain.net'
+
+# the A record you want to update
+host = 'myhomepc'
+
+# the log file where output of each run goes
+logfile = 'update_ip.log'
+
+# the mail server to use for sending error, update notifications, etc.
+# note that at this time, SMTP authentication is not supported
+# if you need that, configure your local smtp server to forward
+# to gmail, or whereever, in authenticated mode.
+smtpserver = 'localhost'
+
+# the 'from' address for the notify email
+sender = 'IP Updater <noreply@yourdomain.net>'
+
+# where to send the notify email
+to = 'Joe User <joeuser@yourdomain.net>'
