@@ -15,14 +15,15 @@ You will need to figure out for yourself if this is acceptible or not.
 
 License:
 --------
-See the include LICENSE file
+See the included LICENSE file
 
 
 Requirements:
 -------------
-Python v2.7  (not tested in 3.x)
-The following added modules:
- logging, pif, smtplib, pygodaddy, email.mime.text 
+
+- Python v2.7  (not tested in 3.x)
+- The following added modules:
+  logging, pif, smtplib, pygodaddy, email.mime.text 
 
 Installation:
 -------------

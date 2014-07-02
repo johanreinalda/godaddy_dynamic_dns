@@ -19,7 +19,7 @@ def email_update(body):
 	s.quit()
 
 #command line arguments parsing
-parser = argparse.ArgumentParser('A Python script to does dynamic updates to GoDaddy DNS')
+parser = argparse.ArgumentParser('A Python script to do updates to a GoDaddy DNS host A record')
 parser.add_argument('-v', '--verbose', action='store_true', help="send emails on 'no ip update required'")
 args = parser.parse_args()
 
