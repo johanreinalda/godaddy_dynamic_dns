@@ -11,11 +11,11 @@ import godaddy
 def email_update(body):
 	global smtplib
 	msg = MIMEText(body)
-	msg['From'] = sender
-	msg['To'] = to
+	msg['From'] = godaddy.sender
+	msg['To'] = godaddy.to
 	msg['Subject'] = 'IP address updater'
 	s = smtplib.SMTP(smtpserver)
-	s.sendmail(sender, to, msg.as_string())
+	s.sendmail(godaddy.sender, godaddy.to, msg.as_string())
 	s.quit()
 
 #command line arguments parsing
@@ -48,7 +48,7 @@ if client.login(godaddy.gduser, godaddy.gdpass):
 				logging.info("Update required: old {0}, new {1}".format(record.value, public_ip))
 				updateinfo = "old " + record.value + ", new " + public_ip
 				# This will fail if you try to set the same IP as already registered!
-				if client.update_dns_record(godaddy.host+"."+godaddy.domain, ip):
+				if client.update_dns_record(godaddy.host+"."+godaddy.domain, public_ip):
 					logging.info('Update OK')
 					email_update("Update OK!\n"+updateinfo)
 				else:
