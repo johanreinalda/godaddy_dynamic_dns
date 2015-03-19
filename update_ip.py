@@ -14,7 +14,7 @@ def email_update(body):
 	msg['From'] = godaddy.sender
 	msg['To'] = godaddy.to
 	msg['Subject'] = 'IP address updater'
-	s = smtplib.SMTP(smtpserver)
+	s = smtplib.SMTP(godaddy.smtpserver)
 	s.sendmail(godaddy.sender, godaddy.to, msg.as_string())
 	s.quit()
 
